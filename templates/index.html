@@ -1,0 +1,57 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planet Habitibility Predictor</title>
+</head>
+<body>
+  {% if result %}
+  <p>{{ result}}</p>
+{% endif %} 
+    <h1>Enter values</h1>
+    <form  method="post" action="/predict">  
+        <table width="100%" cellpadding="10px">
+          
+          <tr>
+            <td><label>Planet Orbit Perid</label></td>
+            <td><input  type="text" name="P_PERIOD"  /></td>
+          </tr>
+          <tr>
+            <td><label>Planet Light Flux</label></td>
+            <td><input  type="text" name="P_FLUX"  /></td>
+          </tr>
+          <tr>
+            <td><label>Planet Temperature</label></td>
+            <td><input  type="text" name="P_TEMP_EQUIL"  /></td>
+          </tr>
+          <tr>
+            <td><label>Planet Type</label></td>
+            <td><input  type="text" name="P_TYPE"  /></td>
+          </tr>
+          <tr>
+            <td><label>Planet Habitable Zone</label></td>
+            <td><input  type="text" name="P_HABZONE_OPT"  /></td>
+          </tr>
+          <tr>
+            <td><label>Planet Radius</label></td>
+            <td><input  type="text" name="P_RADIUS_EST"  /></td>
+          </tr>
+          <tr>
+            <td><label>Planet Mass</label></td>
+            <td><input  type="text" name="P_MASS_EST"  /></td>
+          </tr>
+          
+          <tr>
+            <td><label>Star Temperature Type</label></td>
+            <td><input  type="text" name="S_TYPE_TEMP"  /></td>
+          </tr>
+          
+          <tr>
+            <td></td>
+            <td><input type="submit" value="predict" /></td>
+          </tr>
+
+        </table>
+      </form>  
+</body>
+</html>
